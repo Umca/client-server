@@ -1,0 +1,682 @@
+[
+  {
+    "id": 0,
+    "model": "2016 Aston Martin DB9 Convertible",
+    "maker": "Aston Martin",
+    "year": 2016,
+    "image": 1000,
+    "price": {
+      "min": "213,250",
+      "max": "213,250"
+    },
+    "fuelEconomy": {
+      "min": 13,
+      "max": 19
+    },
+    "bodyOptions": [
+      "convertible",
+      "coupe"
+    ],
+    "description": "The Aston Martin DB9 competes in an elite segment of luxury grand tourers, such as the Bentley GT, Mercedes-Benz CL65 AMG and Maserati GranTurismo. Available as both a coupe and a convertible, the DB9 starts at a lofty $198,250. With lovely lines, a plush interior of supple leather and performance to spare, the 2016 DB9 delivers the best of this exclusive segment."
+  },
+  {
+    "id": 1,
+    "model": "2012 Aston Martin DBS Convertible",
+    "maker": "Aston Martin",
+    "year": 2012,
+    "image": 1001,
+    "price": {
+      "min": "290,461",
+      "max": "295,987"
+    },
+    "fuelEconomy": {
+      "min": 11,
+      "max": 17
+    },
+    "bodyOptions": [
+      "convertible",
+      "coupe"
+    ],
+    "description": "If the Aston Martin DB9 or V8 Vantage isn't quite rare enough, the Aston DBS should almost provide the requisite exclusivity. Competing with the likes of the Ferrari 599 GTB or Lamborghini Aventador--but with a little more ride comfort, and a somewhat more lavishly finished cabin--the DBS can approach the $300,000 mark if optioned properly."
+  },
+  {
+    "id": 2,
+    "model": "2009 Audi A4 Convertible",
+    "maker": "Audi",
+    "year": 2009,
+    "image": 1002,
+    "price": {
+      "min": "40,750",
+      "max": "48,800"
+    },
+    "fuelEconomy": {
+      "min": 17,
+      "max": 30
+    },
+    "bodyOptions": [
+      "convertible",
+      "sedan",
+      "wagon"
+    ],
+    "description": "Audi has upped the luxury performance-car ante with the 2009 A4. Its fresh face and benchmark interior distinguish it from its Mercedes-Benz C-Class and BMW 3-Series competitors, while its new dimensions also make it the largest car in its class. With the sure-footedness of Audi's world-class quattro all-wheel-drive system, more power from two new engines, the availability of both a wagon and a convertible, and the always-addictive oomph of the S4 model, Audi's sports sedan lineup has a little something for everyone."
+  },
+  {
+    "id": 3,
+    "model": "2016 BMW 4 Series Convertible",
+    "maker": "BMW",
+    "year": 2016,
+    "image": 1003,
+    "price": {
+      "min": "50,750",
+      "max": "58,800"
+    },
+    "fuelEconomy": {
+      "min": 23,
+      "max": 34
+    },
+    "bodyOptions": [
+      "convertible",
+      "coupe"
+    ],
+    "description": "The BMW 4-series is a stylish car that offers most of the performance and styling of a sports car without compromising too much comfort or practicality. It features sleek, low styling and is available in a few different body styles, including as a convertible. Performance is brisk, but ride and comfort have been carefully balanced to provide a driving experience that is both entertaining and somewhat luxurious."
+  },
+  {
+    "id": 4,
+    "model": "2018 Alfa Romeo 4C Coupe",
+    "maker": "Alfa Romeo",
+    "year": 2018,
+    "image": 1004,
+    "price": {
+      "min": "55,900",
+      "max": "55,900"
+    },
+    "fuelEconomy": {
+      "min": 24,
+      "max": 34
+    },
+    "bodyOptions": [
+      "convertible",
+      "coupe"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 5,
+    "model": "2018 Audi TT Coupe",
+    "maker": "Audi ",
+    "year": 2018,
+    "image": 1005,
+    "price": {
+      "min": "43,950",
+      "max": "43,950"
+    },
+    "fuelEconomy": {
+      "min": 23,
+      "max": 30
+    },
+    "bodyOptions": [
+      "convertible, coupe"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 6,
+    "model": "2018 Cadillac ATS Coupe",
+    "maker": "Cadillac",
+    "year": 2018,
+    "image": 1006,
+    "price": {
+      "min": "38,495",
+      "max": "63,795"
+    },
+    "fuelEconomy": {
+      "min": 16,
+      "max": 31
+    },
+    "bodyOptions": [
+      "convertible, sedan"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 7,
+    "model": "2017 Bentley Continental Coupe",
+    "maker": "Bentley",
+    "image": 1007,
+    "year": 2017,
+    "price": {
+      "min": "198,500",
+      "max": "293,300"
+    },
+    "fuelEconomy": {
+      "min": 11,
+      "max": 25
+    },
+    "bodyOptions": [
+      "convertible",
+      "sedan"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 8,
+    "model": "2013 Acura ZDX",
+    "maker": "Acura",
+    "image": 1008,
+    "year": 2013,
+    "price": {
+      "min": "50,920",
+      "max": "52,420"
+    },
+    "fuelEconomy": {
+      "min": 16,
+      "max": 23
+    },
+    "bodyOptions": [
+      "crossover"
+    ],
+    "description": "Acura began with no intention of developing an economy car, though efficiencies are everywhere. The obvious competitors are the INFINITI FX37 and BMW's X6. The ZDX is priced directly between the two models, with interior technologies at the top of its specialized segment and luxury appointments well above the competition."
+  },
+  {
+    "id": 9,
+    "model": "2011 Honda Accord Crosstour",
+    "maker": "Honda",
+    "image": 1009,
+    "year": 2011,
+    "price": {
+      "min": "29,990",
+      "max": "36,540"
+    },
+    "fuelEconomy": {
+      "min": 18,
+      "max": 22
+    },
+    "bodyOptions": [
+      "crossover"
+    ],
+    "description": "The 2011 Honda Accord Crosstour perfectly incorporates all the excellent features of the Accord sedan and coupe with the versatility of a vehicle designed for hauling. With raised ground clearance and available 4-wheel-drive, the Crosstour is a fresh alternative to the all-wheel-drive models from Subaru and the Toyota Venza."
+  },
+  {
+    "id": 10,
+    "model": "2013 Suzuki SX4 Hatchback Crossover",
+    "maker": "Suzuki",
+    "year": 2013,
+    "image": 1010,
+    "price": {
+      "min": "16,999",
+      "max": "20,449"
+    },
+    "fuelEconomy": {
+      "min": 12,
+      "max": 30
+    },
+    "bodyOptions": [
+      "crossover",
+      "hatchback",
+      "sedan"
+    ],
+    "description": "The Suzuki SX4 offers an excellent array of features for an astonishingly low price. Even with a starting price of just under $16,000, the base SX4 is a value-laden car that offers the same efficient, powerful engine as in upper-level trims and a solid standard equipment list. At the top of the line, the all-wheel drive Technology hatchback doesn't break the $20,000 barrier, yet bears an impressive set of equipment. With the manual transmission, the SX4 achieves a respectable 26 combined EPA estimated miles per gallon."
+  },
+  {
+    "id": 11,
+    "model": "2018 Audi RS 7",
+    "maker": "Audi",
+    "year": 2018,
+    "image": 1011,
+    "price": {
+      "min": "113,900",
+      "max": "130,700"
+    },
+    "fuelEconomy": {
+      "min": 14,
+      "max": 24
+    },
+    "bodyOptions": [
+      "crossover"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 12,
+    "model": "2016 Chevrolet Sonic Hatchback",
+    "maker": "Chevrolet",
+    "year": 2016,
+    "image": 1012,
+    "price": {
+      "min": "14,945",
+      "max": "21,495"
+    },
+    "fuelEconomy": {
+      "min": 24,
+      "max": 37
+    },
+    "bodyOptions": [
+      "crossover"
+    ],
+    "description": "The subcompact segment seems to get larger by the year, and the 2016 Sonic faces stiff competition from established players like the Ford Fiesta and Honda Fit. With its nimble chassis and turbocharged 1.4L engine, the Sonic offers a spirited driving experience its rivals can't match. Sedan or hatchback body styles also give it the edge, and with a low entry price and plenty of convenience options just a click away, the Sonic stands out as a real bargain for shoppers on a budget."
+  },
+  {
+    "id": 13,
+    "model": "2010 Chrysler PT Cruiser",
+    "maker": "Chrysler",
+    "year": 2010,
+    "image": 1013,
+    "price": {
+      "min": "18,275",
+      "max": "27,775"
+    },
+    "fuelEconomy": {
+      "min": 19,
+      "max": 24
+    },
+    "bodyOptions": [
+      "crossover"
+    ],
+    "description": "The 2010 Chrysler PT Cruiser Classic wagon stands out in the market not just for its distinctive shape but also for its interior space and versatility. It is a smart option to many of the me-too small SUVs and wagons that populate the market."
+  },
+  {
+    "id": 14,
+    "model": "2017 Ferrari F12 Berlinetta",
+    "maker": "Ferrari",
+    "year": 2017,
+    "image": 1014,
+    "price": {
+      "min": "319,995",
+      "max": "450,000"
+    },
+    "fuelEconomy": {
+      "min": 12,
+      "max": 26
+    },
+    "bodyOptions": [
+      "crossover"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 15,
+    "model": "2018 Alfa Romeo Giulia",
+    "maker": "Alfa Romeo",
+    "year": 2018,
+    "image": 1015,
+    "price": {
+      "min": "38,195",
+      "max": "73,700"
+    },
+    "fuelEconomy": {
+      "min": 17,
+      "max": 33
+    },
+    "bodyOptions": [
+      "sedan"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 16,
+    "model": "2017 Aston Martin Rapide S Sedan",
+    "maker": "Aston Martin",
+    "year": 2017,
+    "image": 1016,
+    "price": {
+      "min": "206,000",
+      "max": "260,000"
+    },
+    "fuelEconomy": {
+      "min": 14,
+      "max": 21
+    },
+    "bodyOptions": [
+      "sedan"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 17,
+    "model": "2018 Bentley Mulsanne",
+    "maker": "Bentley",
+    "year": 2018,
+    "image": 1017,
+    "price": {
+      "min": "304,670",
+      "max": "335,600"
+    },
+    "fuelEconomy": {
+      "min": 11,
+      "max": 18
+    },
+    "bodyOptions": [
+      "sedan"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 18,
+    "model": "2014 Acura TL",
+    "maker": "Acura",
+    "year": 2014,
+    "image": 1018,
+    "price": {
+      "min": "36,030",
+      "max": "45,510"
+    },
+    "fuelEconomy": {
+      "min": 17,
+      "max": 23
+    },
+    "bodyOptions": [
+      "sedan"
+    ],
+    "description": "Thanks to its aggressive styling, the TL stands out in its class; its two separate models cater separately to comfort-oriented buyers and performance enthusiasts. The TL's technology features are better than most other mid-size luxury cars."
+  },
+  {
+    "id": 19,
+    "model": "2018 BMW M3",
+    "maker": "BMW",
+    "year": 2018,
+    "image": 1019,
+    "price": {
+      "min": "66,500",
+      "max": "66,500"
+    },
+    "fuelEconomy": {
+      "min": 17,
+      "max": 25
+    },
+    "bodyOptions": [
+      "sedan"
+    ],
+    "description": "The BMW 3 Series is a family of sporty sedans and wagons sized at what would be considered a compact car in the U.S. The 2018 BMW 3 Series sedans, Sports Wagon, and Gran Turismo models are built on a platform that made its debut with the 2012 model. Across its entire lineup, the 3 Series models stand out for being athletic, responsive and fun to drive, as well as relatively fuel-efficient. The F30 redesign brought more back-seat space and cargo space to sedans, as well as a more sophisticated and isolated ride. M3 models, meanwhile, continue to be one of the most practical high-performance cars on the market."
+  },
+  {
+    "id": 20,
+    "model": "2013 Bentley Continental Sedan",
+    "maker": "Bentley",
+    "year": 2013,
+    "image": 1020,
+    "price": {
+      "min": "184,200",
+      "max": "209,600"
+    },
+    "fuelEconomy": {
+      "min": 11,
+      "max": 19
+    },
+    "bodyOptions": [
+      "sedan",
+      "coupe",
+      "convertible"
+    ],
+    "description": "The BMW 3 Series is a family of sporty sedans and wagons sized at what would be considered a compact car in the U.S. The 2018 BMW 3 Series sedans, Sports Wagon, and Gran Turismo models are built on a platform that made its debut with the 2012 model. Across its entire lineup, the 3 Series models stand out for being athletic, responsive and fun to drive, as well as relatively fuel-efficient. The F30 redesign brought more back-seat space and cargo space to sedans, as well as a more sophisticated and isolated ride. M3 models, meanwhile, continue to be one of the most practical high-performance cars on the market."
+  },
+  {
+    "id": 21,
+    "model": "2018 Audi Q7",
+    "maker": "Audi",
+    "year": 2018,
+    "image": 1021,
+    "price": {
+      "min": "49,900",
+      "max": "56,400"
+    },
+    "fuelEconomy": {
+      "min": 19,
+      "max": 25
+    },
+    "bodyOptions": [
+      "suv"
+    ],
+    "description": "The Q7 is a large luxury SUV that is surprisingly car-like to drive. It offers a host of advanced safety technologies, some of which provide autonomous driving capabilities. No corners have been cut outside or in, and with standard 7-passenger convenience and some truly incredible amenities, the Q7 outshines competitors like the BMW X5, Volvo XC90 and Mercedes-Benz GL."
+  },
+  {
+    "id": 22,
+    "model": "2018 Alfa Romeo Stelvio",
+    "maker": "Alfa Romeo",
+    "year": 2018,
+    "image": 1022,
+    "price": {
+      "min": "41,995",
+      "max": "43,995"
+    },
+    "fuelEconomy": {
+      "min": 22,
+      "max": 28
+    },
+    "bodyOptions": [
+      "suv"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 23,
+    "model": "2018 Bentley Flying Spur",
+    "maker": "Bentley",
+    "image": 1023,
+    "year": 2018,
+    "price": {
+      "min": "189,000",
+      "max": "244,600"
+    },
+    "fuelEconomy": {
+      "min": 12,
+      "max": 22
+    },
+    "bodyOptions": [
+      "suv"
+    ],
+    "description": "Aston Martin has released a new trim level for the Rapide in 2012. Dubbed the Rapide Luxe, the new trim does just as its name implies and adds a variety of swanky luxury features to the already luxurious 4-door Aston."
+  },
+  {
+    "id": 24,
+    "model": "2013 Cadillac Escalade EXT",
+    "maker": "Cadillac",
+    "year": 2013,
+    "image": 1024,
+    "price": {
+      "min": "63,060",
+      "max": "69,640"
+    },
+    "fuelEconomy": {
+      "min": 13,
+      "max": 18
+    },
+    "bodyOptions": [
+      "suv"
+    ],
+    "description": "The Cadillac Escalade has a lot in common with GM's other full-size SUVs-- the Chevrolet Tahoe/Suburban and GMC Yukon/XL, underneath--but its interior sets it apart. The Escalade's cabin is one of the most impressive, opulent interiors offered in an SUV, and ride quality and overall interior quality are top-notch. All the more impressive is the way the Escalade performs and handles considering its size and weight. The Hybrid version, though more expensive, doesn\t give up any of the standard Escalade's luxury, handling, or ride quality, but does manage to get up to 50% better fuel economy."
+  },
+  {
+    "id": 25,
+    "model": "2013 Chevrolet Avalanche",
+    "maker": "Chevrolet",
+    "year": 2013,
+    "image": 1025,
+    "price": {
+      "min": "35,980",
+      "max": "47,885"
+    },
+    "fuelEconomy": {
+      "min": 15,
+      "max": 21
+    },
+    "bodyOptions": [
+      "truck"
+    ],
+    "description": "The 2013 Chevrolet Avalanche's design is virtually unique in the market. It attempts to solve both passenger-hauling needs and cargo-hauling needs with a single truck. There's almost nothing else quite like the Avalanche's folding mid-gate in the market-- it allows the bed to be expanded only when needed and have more interior space the rest of the time. Overall, handling and ride quality are a step above what might be expected in a full-size pickup and the cabin has a refined feel with top-notch materials. Towing capacity is an impressive 8,100 pounds."
+  },
+  {
+    "id": 26,
+    "model": "2011 Dodge Dakota",
+    "maker": "Dodge",
+    "year": 2011,
+    "image": 1026,
+    "price": {
+      "min": "23,210 ",
+      "max": "33,635"
+    },
+    "fuelEconomy": {
+      "min": 14,
+      "max": 20
+    },
+    "bodyOptions": [
+      "truck"
+    ],
+    "description": "The Dodge Dakota is one of just a few remaining mid-size pickups, more practically sized for city driving yet almost as capable as their full size counterparts. While the Dakota is no longer the only mid-size truck offering a V8 engine, it still is an excellent hauler, tow-rated at 6,500 lbs."
+  },
+  {
+    "id": 27,
+    "model": "2010 Ford Explorer Sport Trac",
+    "maker": "Ford",
+    "image": 1027,
+    "year": 2011,
+    "price": {
+      "min": "28,210",
+      "max": "35,590"
+    },
+    "fuelEconomy": {
+      "min": 13,
+      "max": 20
+    },
+    "bodyOptions": [
+      "truck"
+    ],
+    "description": "The Ford Explorer Sport Trac is built on the same chassis as the Explorer SUV, but with the wheelbase extended nearly 17 inches. This allows room for four full-size passenger doors and a short pickup bed. Two available engines, a 4.0L V6 and a 4.6L V8, are capable of towing 5,060 lb and 7,160 lb, respectively. Gas mileage is in line with other crew-cab pickups, at 13 mpg city and 19 mpg highway. Because of its unique configuration, the Explorer Sport Trac is a versatile option for those looking for the comfort and amenities of an SUV and the cargo-carrying capabilities of a pickup."
+  },
+  {
+    "id": 28,
+    "model": "2018 Chevrolet City Express",
+    "maker": "Chevrolet",
+    "year": 2018,
+    "image": 1028,
+    "price": {
+      "min": "22,855",
+      "max": "23,715"
+    },
+    "fuelEconomy": {
+      "min": 24,
+      "max": 26
+    },
+    "bodyOptions": [
+      "van/minivan"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 29,
+    "model": "2018 Honda Odyssey",
+    "maker": "Honda",
+    "year": 2018,
+    "image": 1029,
+    "price": {
+      "min": "29,990",
+      "max": "46,770"
+    },
+    "fuelEconomy": {
+      "min": 19,
+      "max": 28
+    },
+    "bodyOptions": [
+      "van/minivan"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 30,
+    "model": "2018 Kia Sedona",
+    "maker": "Kia",
+    "image": 1030,
+    "year": 2018,
+    "price": {
+      "min": "27,000",
+      "max": "42,000"
+    },
+    "fuelEconomy": {
+      "min": 17,
+      "max": 25
+    },
+    "bodyOptions": [
+      "van/minivan"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  },
+  {
+    "id": 31,
+    "model": "2012 Audi A4 Wagon",
+    "maker": "Audi",
+    "image": 1031,
+    "year": 2012,
+    "price": {
+      "min": "36,400",
+      "max": "42,000"
+    },
+    "fuelEconomy": {
+      "min": 21,
+      "max": 29
+    },
+    "bodyOptions": [
+      "wagon"
+    ],
+    "description": "The A4 features an impressive 8-speed automatic transmission, and with the sure-footedness of Audi's world-class quattro all-wheel-drive system, a powerful engine, the availability of a wagon and the always-addictive performance of the S4 model, the lineup has a little something for everyone."
+  },
+  {
+    "id": 32,
+    "model": "2016 Audi allroad",
+    "maker": "Audi",
+    "image": 1032,
+    "year": 2016,
+    "price": {
+      "min": "42,700",
+      "max": "42,700"
+    },
+    "fuelEconomy": {
+      "min": 21,
+      "max": 28
+    },
+    "bodyOptions": [
+      "wagon"
+    ],
+    "description": "The sport wagon segment has a narrow target audience, and each model tends to inspire intense loyalty among its owners. The Allroad is no stranger to such diehard loyalty. It offers Audi's legendary quattro all-wheel-drive system, standard luxury features, a quite capable turbocharged engine, rugged styling and excellent handling. The whole package makes for a reasonably priced, highly entertaining ride with few peers."
+  },
+  {
+    "id": 33,
+    "model": "2014 Cadillac CTS Wagon",
+    "maker": "Cadillac",
+    "image": 1033,
+    "year": 2014,
+    "price": {
+      "min": "42,195",
+      "max": "63,600"
+    },
+    "fuelEconomy": {
+      "min": 14,
+      "max": 26
+    },
+    "bodyOptions": [
+      "coupe",
+      "sedan",
+      "wagon"
+    ],
+    "description": "The sport wagon segment has a narrow target audience, and each model tends to inspire intense loyalty among its owners. The Allroad is no stranger to such diehard loyalty. It offers Audi's legendary quattro all-wheel-drive system, standard luxury features, a quite capable turbocharged engine, rugged styling and excellent handling. The whole package makes for a reasonably priced, highly entertaining ride with few peers."
+  },
+  {
+    "id": 34,
+    "model": "2017 Ferrari GTC4Lusso",
+    "maker": "Ferrari",
+    "year": 2017,
+    "image": 1034,
+    "price": {
+      "min": "298,900",
+      "max": "298,900"
+    },
+    "fuelEconomy": {
+      "min": 12,
+      "max": 17
+    },
+    "bodyOptions": [
+      "coupe",
+      "sedan",
+      "wagon"
+    ],
+    "description": "Data on this page may have come in part, or entirely, from one or more of the following providers."
+  }
+]
