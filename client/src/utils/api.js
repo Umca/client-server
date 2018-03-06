@@ -15,12 +15,12 @@ const API = {
                         'Content-Type': 'application/json'
                     }
                 },)
-                    .then(res => res.json())
                     .then(res => {
                         request = null
-                        console.log(res)
-                    }) 
+                        return res.json()
+                    })
             )
+            return request;
         }
     }
 }
