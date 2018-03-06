@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import API from '../utils/api'
+import SearchOption from '../components/SearchOption'
 
 export default class Search extends Component{
     constructor(){
@@ -17,7 +18,17 @@ export default class Search extends Component{
         this.setState({
             inputValue: t
         }, () => {
-            API.searchRequest(t)
+            if(t){
+                API.searchRequest(t)
+                .then(res => this.setState({
+                    dataSource: res
+                }))
+            } else {
+                this.setState({
+                    dataSource: []
+                })
+            }
+            
         })
     }
     render(){
@@ -27,6 +38,11 @@ export default class Search extends Component{
                 value = {this.state.inputValue}
                 onChange = {this.handleInputChange.bind(this)}
                 />
+                <div>
+                    {
+                        this.state.dataSource.map( car => <SearchOption model={car.model} key={car.id} />)
+                    }
+                </div>
             </div>
         )
     }

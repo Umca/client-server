@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Search from './SearchContainer' 
+import Filter from './FilterContainer'
 import '../styles/App.css'
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <Search />
+        <Filter />
       </div>
     );
   }
