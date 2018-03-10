@@ -1,28 +1,114 @@
 import React, { Component } from 'react'
 import FilterInputOption from '../components/FilterInputOption'
+import FilterRangeOption from '../components/FilterRangeOption'
 
 export default class Filter extends Component{
     constructor(){
         super()
         this.state = {
-            bodies: [
-                'Convertible', 'Coupe', 'Crossover', 'Hatchback',
-                 'Sedan', 'SUV', 'Truck', 'Van/Minivan', 'Wagon'
-            ],
-            makers: [
+            bodyFilter: [],
+            makerFilter: [],
+            fuelFilter: 5,
+            priceFilter: 1000 
+        }
+        this.bodies= [
+            'Convertible', 'Coupe', 'Crossover', 'Hatchback',
+            'Sedan', 'SUV', 'Truck', 'Van/Minivan', 'Wagon'
+        ];
+        this.makers= [
                 'Acura', 'Alfa Romeo', 'Aston Martin', 'Audi',
                 'Bentley', 'BMW', 'Cadillac', 'Chevrolet', 'Chrysler', 'Dodge',
                 'Ferrari', 'Ford', 'Honda', 'Kia', 'Suzuki'
             ]
+        
+    }
+    handleCheckbox(id, type, e) {
+        if (e.target.checked) {
+            this.setState({
+                [`${type}Filter`]: [...this.state[`${type}Filter`], id]
+            })
+        } else { 
+            let index = this.state[`${type}Filter`].indexOf(id)
+            this.setState({
+                [`${type}Filter`]: [...this.state[`${type}Filter`].slice(0, index),
+                    ...this.state[`${type}Filter`].slice(index +1)
+                ]
+            })
         }
+    }
+    handleRange(type, e) { 
+        this.setState({
+            [`${type}Filter`]: e.target.value
+        })
+    }
+    formateText(str) {
+        return `${parseInt(str) / 1000},000`
     }
     render(){
         return(
-            <div>
+            <div className="App-filter_wrapper">
+                <div className="maker_filter">
+                    <p className="head">Makes</p>    
+                    {
+                        this.makers.map((maker, index) =>
+                            <FilterInputOption
+                                opts={{
+                                    text: `${maker}`,
+                                    key: `${index}`,
+                                    forId: `${index}_maker`,
+                                    handleCallback: this.handleCheckbox.bind(this, maker, 'maker')
+                                    
+                                }}
+                                key={index}
+                            />)
+                    }
+                </div>     
+                <div className="body_filter">   
+                    <p className="head">Body styles</p>    
                 {
-                    this.state.bodies.map((body, index) => 
-                        <FilterInputOption text = {body} key={index} />)
-                }
+                    this.bodies.map((body, index) => 
+                            <FilterInputOption
+                                opts={{
+                                    text: `${body}`,
+                                    key: `${index}`,
+                                    forId: `${index}_body`,
+                                    handleCallback: this.handleCheckbox.bind(this, body, 'body')
+                                }}
+                                key={index}
+                            />)
+                    }
+                </div>
+                <div className="price_filter">
+                    <p className="head">Price range</p>    
+                    <FilterRangeOption
+                        opts={{
+                            id:"price_range",
+                            handleCallback: this.handleRange.bind(this, 'price'),
+                            min: '1000',
+                            max: '800000',
+                            step: '1000',
+                            description: `Under $ ${this.formateText(this.state.priceFilter)}`,
+                        }}
+                    />
+                        
+                </div>
+                < div className="fuel_filter" >
+                    <p className="head">Fuel economy</p>      
+                    <FilterRangeOption
+                        opts={
+                            {
+                                id:"fuel_range",
+                                handleCallback: this.handleRange.bind(this, 'fuel'),
+                                min: '5',
+                                max: '100',
+                                step: '1',
+                                description: `More than ${this.state.fuelFilter} MPG Highway`,
+                            }
+                        }    
+                        
+
+                />
+                </div>
             </div>
         )
     }

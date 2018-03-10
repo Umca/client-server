@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import API from '../utils/api'
 import SearchOption from '../components/SearchOption'
+import '../styles/search.css'
 
 export default class Search extends Component{
     constructor(){
@@ -33,11 +34,15 @@ export default class Search extends Component{
     }
     render(){
         return (
-            <div>
-                <input  
-                value = {this.state.inputValue}
-                onChange = {this.handleInputChange.bind(this)}
-                />
+            <div className="App-search_wrapper">
+                <p>
+                    <input
+                    className="search_input"    
+                    value = {this.state.inputValue}
+                    onChange = {this.handleInputChange.bind(this)}
+                    />
+                    <input className="search_input_loop" />
+                </p>    
                 <div>
                     {
                         this.state.dataSource.map( car => <SearchOption model={car.model} key={car.id} />)
