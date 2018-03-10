@@ -4,6 +4,7 @@
   grid-auto-columns: 30vw auto;
   justify-items: center;
   align-items: center;
+  font-size: 2vw;
 }
 
 .App-logo {
