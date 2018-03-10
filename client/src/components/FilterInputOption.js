@@ -1,12 +1,15 @@
 import React from 'react'
-import '../styles/part.css'
+import '../styles/filter.css'
 
-const FilterRangeOption = ({text}) => {
+const FilterRangeOption = (props) => {
     return(
-        <div className="rounded">
-            <input type="checkbox" value="None" id="rounded" name="check" />
-            <label htmlFor="rounded">{text}</label>
-        </div>
+        <p>
+            <input type="checkbox"
+                id={`test${props.opts.forId}`}
+                onChange={props.opts.handleCallback}
+            />
+            <label htmlFor={`test${props.opts.forId}`} > {props.opts.text} </label>
+        </p>
     )
 }
 
