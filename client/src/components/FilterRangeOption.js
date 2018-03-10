@@ -1,17 +1,17 @@
 import React from 'react'
 
-const FilterRangeOption = (props) => { 
+const FilterRangeOption = ({ props }) => { 
     return (
         <div>
             <input
                 type="range"
-                id={props.opts.id}
-                onChange={props.opts.handleCallback}
-                min={props.opts.min}
-                max={props.opts.max}
-                step={props.opts.step}
+                id={props.id}
+                onChange={props.handleCallback}
+                min={props.min}
+                max={props.max}
+                step={props.step}
                 />
-            <label htmlFor={props.opts.id}>{props.opts.description}</label>
+            <label htmlFor={props.id}>{props.description}</label>
         </div>
     )
 }

@@ -1,14 +1,14 @@
 import React from 'react'
 import '../styles/filter.css'
 
-const FilterRangeOption = (props) => {
+const FilterRangeOption = ({ props }) => {
     return(
         <p>
             <input type="checkbox"
-                id={`test${props.opts.forId}`}
-                onChange={props.opts.handleCallback}
+                id={`test${props.forId}`}
+                onChange={props.handleCallback}
             />
-            <label htmlFor={`test${props.opts.forId}`} > {props.opts.text} </label>
+            <label htmlFor={`test${props.forId}`} > {props.text} </label>
         </p>
     )
 }

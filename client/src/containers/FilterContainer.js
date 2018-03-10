@@ -6,11 +6,13 @@ export default class Filter extends Component{
     constructor(){
         super()
         this.state = {
-            bodyFilter: [],
-            makerFilter: [],
+            // bodyFilter: [],
+            // makerFilter: [],
             fuelFilter: 5,
             priceFilter: 1000 
         }
+        this.bodyFilter = []
+        this.makerFilter = []
         this.bodies= [
             'Convertible', 'Coupe', 'Crossover', 'Hatchback',
             'Sedan', 'SUV', 'Truck', 'Van/Minivan', 'Wagon'
@@ -24,21 +26,33 @@ export default class Filter extends Component{
     }
     handleCheckbox(id, type, e) {
         if (e.target.checked) {
-            this.setState({
-                [`${type}Filter`]: [...this.state[`${type}Filter`], id]
-            })
+            // this.setState({
+            //     [`${type}Filter`]: [...this.state[`${type}Filter`], id]
+            // })
+            this[`${type}Filter`].push(id)
+            this.props.updateState(type, this[`${type}Filter`])
         } else { 
-            let index = this.state[`${type}Filter`].indexOf(id)
-            this.setState({
-                [`${type}Filter`]: [...this.state[`${type}Filter`].slice(0, index),
-                    ...this.state[`${type}Filter`].slice(index +1)
-                ]
-            })
+            // let index = this.state[`${type}Filter`].indexOf(id)
+            // this.setState({
+            //     [`${type}Filter`]: [...this.state[`${type}Filter`].slice(0, index),
+            //         ...this.state[`${type}Filter`].slice(index +1)
+            //     ]
+            // })
+            let index = this[`${type}Filter`].indexOf(id)
+            
+                this[`${type}Filter`] = [...this[`${type}Filter`].slice(0, index),
+                ...this[`${type}Filter`].slice(index + 1)
+            ]
+            this.props.updateState(type, this[`${type}Filter`])
+            
         }
     }
     handleRange(type, e) { 
+        let val = e.target.value
         this.setState({
-            [`${type}Filter`]: e.target.value
+            [`${type}Filter`]: val
+        }, () => { 
+            this.props.updateState(type, val)
         })
     }
     formateText(str) {
@@ -52,7 +66,7 @@ export default class Filter extends Component{
                     {
                         this.makers.map((maker, index) =>
                             <FilterInputOption
-                                opts={{
+                                props={{
                                     text: `${maker}`,
                                     key: `${index}`,
                                     forId: `${index}_maker`,
@@ -68,7 +82,7 @@ export default class Filter extends Component{
                 {
                     this.bodies.map((body, index) => 
                             <FilterInputOption
-                                opts={{
+                                props={{
                                     text: `${body}`,
                                     key: `${index}`,
                                     forId: `${index}_body`,
@@ -81,7 +95,7 @@ export default class Filter extends Component{
                 <div className="price_filter">
                     <p className="head">Price range</p>    
                     <FilterRangeOption
-                        opts={{
+                        props={{
                             id:"price_range",
                             handleCallback: this.handleRange.bind(this, 'price'),
                             min: '1000',
@@ -95,7 +109,7 @@ export default class Filter extends Component{
                 < div className="fuel_filter" >
                     <p className="head">Fuel economy</p>      
                     <FilterRangeOption
-                        opts={
+                        props={
                             {
                                 id:"fuel_range",
                                 handleCallback: this.handleRange.bind(this, 'fuel'),
