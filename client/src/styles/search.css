@@ -1,0 +1,26 @@
+.App-search_wrapper{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-content: center;
+}
+.search_input{
+    border: 2px solid #ccc;
+    border-radius: 4px 0px 0px 4px;
+    width: 36vw;
+    padding: 0.8vw 0.7vw;
+}
+.search_input_loop{
+    cursor: pointer;
+    border: none;
+    background: url(http://thesuiteworld.com/wp-admin/maint/search-icon-white-png-540.png) no-repeat center center,
+    #ccc;
+    background-size: 3vw 3vw;
+    border-radius: 0px 4px 4px  0px ;
+    border: 2px solid #ccc;
+    padding: 15px 25px;
+    display: inline-block;
+    width: 2vw;
+    padding: 0.8vw 0.7vw;
+}
