@@ -10,7 +10,7 @@ const filterOptions = {
             splited = val.split(',')
         }
 
-        return splited.some( body => obj.bodyOptions.indexOf(body) > -1)
+        return splited.some( body => obj.bodyOptions.indexOf(body.toLowerCase()) > -1)
     },
     maker: (val, obj) => {
          let splited;
@@ -26,10 +26,10 @@ const filterOptions = {
         return parseInt(obj.year) === parseInt(val);
     },
     price:(val, obj) => {
-        return obj.price.max <= val;
+        return obj.price.max <= parseInt(val);
     },
-    fuelEconomy: (val, obj) => {
-        return obj.fuelEconomy.min >= val;
+    fuel: (val, obj) => {
+        return obj.fuel.min >= parseInt(val);
     }
 }
 

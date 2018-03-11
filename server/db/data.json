@@ -6,10 +6,10 @@
     "year": 2016,
     "image": 1000,
     "price": {
-      "min": "213,250",
-      "max": "213,250"
+      "min": 213250,
+      "max": 213250
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 13,
       "max": 19
     },
@@ -26,10 +26,10 @@
     "year": 2012,
     "image": 1001,
     "price": {
-      "min": "290,461",
-      "max": "295,987"
+      "min": 290461,
+      "max": 295987
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 11,
       "max": 17
     },
@@ -46,10 +46,10 @@
     "year": 2009,
     "image": 1002,
     "price": {
-      "min": "40,750",
-      "max": "48,800"
+      "min": 40750,
+      "max": 48800
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 17,
       "max": 30
     },
@@ -67,10 +67,10 @@
     "year": 2016,
     "image": 1003,
     "price": {
-      "min": "50,750",
-      "max": "58,800"
+      "min": 50750,
+      "max": 58800
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 23,
       "max": 34
     },
@@ -87,10 +87,10 @@
     "year": 2018,
     "image": 1004,
     "price": {
-      "min": "55,900",
-      "max": "55,900"
+      "min": 55900,
+      "max": 55900
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 24,
       "max": 34
     },
@@ -107,10 +107,10 @@
     "year": 2018,
     "image": 1005,
     "price": {
-      "min": "43,950",
-      "max": "43,950"
+      "min": 43950,
+      "max": 43950
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 23,
       "max": 30
     },
@@ -126,10 +126,10 @@
     "year": 2018,
     "image": 1006,
     "price": {
-      "min": "38,495",
-      "max": "63,795"
+      "min": 38495,
+      "max": 63795
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 16,
       "max": 31
     },
@@ -145,10 +145,10 @@
     "image": 1007,
     "year": 2017,
     "price": {
-      "min": "198,500",
-      "max": "293,300"
+      "min": 198500,
+      "max": 293300
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 11,
       "max": 25
     },
@@ -165,17 +165,17 @@
     "image": 1008,
     "year": 2013,
     "price": {
-      "min": "50,920",
-      "max": "52,420"
+      "min": 50920,
+      "max": 52420
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 16,
       "max": 23
     },
     "bodyOptions": [
       "crossover"
     ],
-    "description": "Acura began with no intention of developing an economy car, though efficiencies are everywhere. The obvious competitors are the INFINITI FX37 and BMW's X6. The ZDX is priced directly between the two models, with interior technologies at the top of its specialized segment and luxury appointments well above the competition."
+    "description": "Acura began with no intention of developing an  car, though efficiencies are everywhere. The obvious competitors are the INFINITI FX37 and BMW's X6. The ZDX is priced directly between the two models, with interior technologies at the top of its specialized segment and luxury appointments well above the competition."
   },
   {
     "id": 9,
@@ -184,10 +184,10 @@
     "image": 1009,
     "year": 2011,
     "price": {
-      "min": "29,990",
-      "max": "36,540"
+      "min": 29990,
+      "max": 36540
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 18,
       "max": 22
     },
@@ -203,10 +203,10 @@
     "year": 2013,
     "image": 1010,
     "price": {
-      "min": "16,999",
-      "max": "20,449"
+      "min": 16999,
+      "max": 20449
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 12,
       "max": 30
     },
@@ -224,10 +224,10 @@
     "year": 2018,
     "image": 1011,
     "price": {
-      "min": "113,900",
-      "max": "130,700"
+      "min": 113900,
+      "max": 130700
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 14,
       "max": 24
     },
@@ -243,10 +243,10 @@
     "year": 2016,
     "image": 1012,
     "price": {
-      "min": "14,945",
-      "max": "21,495"
+      "min": 14945,
+      "max": 21495
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 24,
       "max": 37
     },
@@ -262,10 +262,10 @@
     "year": 2010,
     "image": 1013,
     "price": {
-      "min": "18,275",
-      "max": "27,775"
+      "min": 18275,
+      "max": 27775
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 19,
       "max": 24
     },
@@ -281,10 +281,10 @@
     "year": 2017,
     "image": 1014,
     "price": {
-      "min": "319,995",
-      "max": "450,000"
+      "min": 319995,
+      "max": 450000
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 12,
       "max": 26
     },
@@ -300,10 +300,10 @@
     "year": 2018,
     "image": 1015,
     "price": {
-      "min": "38,195",
-      "max": "73,700"
+      "min": 38195,
+      "max": 73700
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 17,
       "max": 33
     },
@@ -319,10 +319,10 @@
     "year": 2017,
     "image": 1016,
     "price": {
-      "min": "206,000",
-      "max": "260,000"
+      "min": 206000,
+      "max": 260000
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 14,
       "max": 21
     },
@@ -338,10 +338,10 @@
     "year": 2018,
     "image": 1017,
     "price": {
-      "min": "304,670",
-      "max": "335,600"
+      "min": 304670,
+      "max": 335600
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 11,
       "max": 18
     },
@@ -357,10 +357,10 @@
     "year": 2014,
     "image": 1018,
     "price": {
-      "min": "36,030",
-      "max": "45,510"
+      "min": 36030,
+      "max": 45510
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 17,
       "max": 23
     },
@@ -376,10 +376,10 @@
     "year": 2018,
     "image": 1019,
     "price": {
-      "min": "66,500",
-      "max": "66,500"
+      "min": 66500,
+      "max": 66500
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 17,
       "max": 25
     },
@@ -395,10 +395,10 @@
     "year": 2013,
     "image": 1020,
     "price": {
-      "min": "184,200",
-      "max": "209,600"
+      "min": 184200,
+      "max": 209600
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 11,
       "max": 19
     },
@@ -416,10 +416,10 @@
     "year": 2018,
     "image": 1021,
     "price": {
-      "min": "49,900",
-      "max": "56,400"
+      "min": 49900,
+      "max": 56400
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 19,
       "max": 25
     },
@@ -435,10 +435,10 @@
     "year": 2018,
     "image": 1022,
     "price": {
-      "min": "41,995",
-      "max": "43,995"
+      "min": 41995,
+      "max": 43995
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 22,
       "max": 28
     },
@@ -454,10 +454,10 @@
     "image": 1023,
     "year": 2018,
     "price": {
-      "min": "189,000",
-      "max": "244,600"
+      "min": 189000,
+      "max": 244600
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 12,
       "max": 22
     },
@@ -473,17 +473,17 @@
     "year": 2013,
     "image": 1024,
     "price": {
-      "min": "63,060",
-      "max": "69,640"
+      "min": 63060,
+      "max": 69640
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 13,
       "max": 18
     },
     "bodyOptions": [
       "suv"
     ],
-    "description": "The Cadillac Escalade has a lot in common with GM's other full-size SUVs-- the Chevrolet Tahoe/Suburban and GMC Yukon/XL, underneath--but its interior sets it apart. The Escalade's cabin is one of the most impressive, opulent interiors offered in an SUV, and ride quality and overall interior quality are top-notch. All the more impressive is the way the Escalade performs and handles considering its size and weight. The Hybrid version, though more expensive, doesn\t give up any of the standard Escalade's luxury, handling, or ride quality, but does manage to get up to 50% better fuel economy."
+    "description": "The Cadillac Escalade has a lot in common with GM's other full-size SUVs-- the Chevrolet Tahoe/Suburban and GMC Yukon/XL, underneath--but its interior sets it apart. The Escalade's cabin is one of the most impressive, opulent interiors offered in an SUV, and ride quality and overall interior quality are top-notch. All the more impressive is the way the Escalade performs and handles considering its size and weight. The Hybrid version, though more expensive, doesn\t give up any of the standard Escalade's luxury, handling, or ride quality, but does manage to get up to 50% better fuel ."
   },
   {
     "id": 25,
@@ -492,10 +492,10 @@
     "year": 2013,
     "image": 1025,
     "price": {
-      "min": "35,980",
-      "max": "47,885"
+      "min": 35980,
+      "max": 47885
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 15,
       "max": 21
     },
@@ -511,10 +511,10 @@
     "year": 2011,
     "image": 1026,
     "price": {
-      "min": "23,210 ",
-      "max": "33,635"
+      "min": 23210,
+      "max": 33635
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 14,
       "max": 20
     },
@@ -530,10 +530,10 @@
     "image": 1027,
     "year": 2011,
     "price": {
-      "min": "28,210",
-      "max": "35,590"
+      "min": 28210,
+      "max": 35590
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 13,
       "max": 20
     },
@@ -549,10 +549,10 @@
     "year": 2018,
     "image": 1028,
     "price": {
-      "min": "22,855",
-      "max": "23,715"
+      "min": 22855,
+      "max": 23715
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 24,
       "max": 26
     },
@@ -568,10 +568,10 @@
     "year": 2018,
     "image": 1029,
     "price": {
-      "min": "29,990",
-      "max": "46,770"
+      "min": 29990,
+      "max": 46770
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 19,
       "max": 28
     },
@@ -587,10 +587,10 @@
     "image": 1030,
     "year": 2018,
     "price": {
-      "min": "27,000",
-      "max": "42,000"
+      "min": 27000,
+      "max": 42000
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 17,
       "max": 25
     },
@@ -606,10 +606,10 @@
     "image": 1031,
     "year": 2012,
     "price": {
-      "min": "36,400",
-      "max": "42,000"
+      "min": 36400,
+      "max": 42000
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 21,
       "max": 29
     },
@@ -625,10 +625,10 @@
     "image": 1032,
     "year": 2016,
     "price": {
-      "min": "42,700",
-      "max": "42,700"
+      "min": 42700,
+      "max": 42700
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 21,
       "max": 28
     },
@@ -644,10 +644,10 @@
     "image": 1033,
     "year": 2014,
     "price": {
-      "min": "42,195",
-      "max": "63,600"
+      "min": 42195,
+      "max": 63600
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 14,
       "max": 26
     },
@@ -665,10 +665,10 @@
     "year": 2017,
     "image": 1034,
     "price": {
-      "min": "298,900",
-      "max": "298,900"
+      "min": 298900,
+      "max": 298900
     },
-    "fuelEconomy": {
+    "fuel": {
       "min": 12,
       "max": 17
     },
