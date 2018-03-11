@@ -2,22 +2,21 @@ import React, { Component } from 'react'
 import '../styles/search.css'
 
 export default class Search extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 
         this.state = {
-            inputValue:'',
-            //dataSource: []
+            inputValue:this.props.state.searchStr,
         }
+        
     }
 
     handleInputChange(e){
-        let t = e.target.value
-
+        let str = e.target.value
         this.setState({
-            inputValue: t
-        },
-            this.props.updateState('searchStr', t)    
+            inputValue: str
+        },        
+            this.props.updateState('searchStr', str)    
         )
     }
     render(){
@@ -25,9 +24,9 @@ export default class Search extends Component{
             <div className="App-search_wrapper">
                 <p>
                     <input
-                    className="search_input"    
-                    value = {this.state.inputValue}
-                    onChange = {this.handleInputChange.bind(this)}
+                        className="search_input"    
+                        value = {this.state.inputValue}
+                        onChange = {this.handleInputChange.bind(this)}
                     />
                     <input className="search_input_loop" />
                 </p>    

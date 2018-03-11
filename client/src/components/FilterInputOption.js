@@ -4,7 +4,8 @@ import '../styles/filter.css'
 const FilterRangeOption = ({ props }) => {
     return(
         <p>
-            <input type="checkbox"
+            <input
+                type="checkbox"
                 id={`test${props.forId}`}
                 onChange={props.handleCallback}
             />

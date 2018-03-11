@@ -1,10 +1,13 @@
 import React from 'react'
+import { formatString } from '../utils/additional'
 import "../styles/result.css"
 
 const Result = ({ data }) => {
     return (
         <div className="App-result_wrapper">
-            {data.map(item => <ResultItem key={item.model} data={item} />)}
+            {
+                data.map(item => <ResultItem key={item.model} data={item} />)
+            }
         </div>
         )
     }
@@ -24,7 +27,7 @@ const ResultItem = ({ data }) => {
                         <p className="bold">Available in: </p>
                     </div>
                     <div className="description_values">
-                        <p>{`$ ${data.price.min} - $ ${data.price.max}`}</p>
+                        <p>{`$ ${formatString(data.price.min)} - $ ${formatString(data.price.max)}`}</p>
                         <p>{`${data.fuel.min} MPG - ${data.fuel.max} MPG`}</p>
                         <p>{
                             data.bodyOptions.map((body, i, arr) => <span key={i}> {body} {(i==arr.length-1) ? '' : ','} </span>)

@@ -19,9 +19,7 @@ const API = {
                         request = null
                         return res.json()
                     })
-                    .catch(err => {
-                        console.log(err)
-                })
+
             )
             return request;
         }

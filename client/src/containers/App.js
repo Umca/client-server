@@ -1,10 +1,13 @@
-import React, { Component } from 'react'
-import Search from './SearchContainer' 
+import React, {
+  Component
+} from 'react'
+import Search from './SearchContainer'
 import Filter from './FilterContainer'
 import Result from '../components/Result'
 import '../styles/App.css'
 import logo from '../assets/images/logo.png'
 import API from '../utils/api'
+import { formatUrl } from '../utils/additional'
 
 let initialState = {
   price: 800000,
@@ -21,68 +24,51 @@ class App extends Component {
   }
   updateState(piece, val) {
     this.setState({
-      [`${piece}`]: val
-    },
-      () => {
-       if (piece == "searchStr") {
-         if (val) { 
-           API.request(this.formatUrl(piece))
-             .then(res => this.setState({
-               data: res
-             }))
-         } else {
-            this.setState({
-              data: initialState.data
-            })
-         }
-                
-      } 
-       else {
-         API.request(this.formatUrl())
-           .then(res => this.setState({
-             data: res
-           }))
-        }
-      }
+        [`${piece}`]: val
+      },
+      () => this.sendRequest(piece, val)
     )
   }
 
-  formatUrl(type) { 
-    let result = "";
-    switch (type) {
-      case 'searchStr': result = `search?model=${this.state[type]}`;
-        break;  
-      default: result = `filter?${this.getUrlQuery()}`  
-    }
-    return result;
+  sendRequest(piece, val) {
+    if (piece == "searchStr") this.searchRequest(piece, val)
+    else this.filterRequest(piece, val)
   }
-  getUrlQuery() {
-    let query = "";
 
-    for (let key in this.state) {
-      if (this.state.hasOwnProperty(key) && key !== 'searchStr' && key !== 'data') {
-        if (this.state[key] == initialState[key]) { 
-          continue;
-        }
-        if (typeof this.state[key] == 'string' || typeof this.state[key] == 'number') {
-          query += `${key}=${this.state[key]}&`
-        } else { 
-          query += `${key}=`
-          query += this.state[key].join(',') +'&'
-        }
-      }
+  searchRequest(piece, val) {
+    if (val) {
+      API.request(formatUrl(piece, this.state, initialState))
+        .then(res => this.setState({
+          data: res
+        }))
+    } else {
+      this.setState({
+        data: initialState.data
+      })
     }
-    return query;
   }
+
+  filterRequest(piece, val) { 
+    API.request(formatUrl(null, this.state, initialState))
+      .then(res => this.setState({
+        data: res
+      }))
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img className="App-logo" alt="logo" src={logo}/>
+        <header className = "App-header">
+          <img className = "App-logo"
+          alt = "logo"
+          src = {
+            logo
+          }
+          />
         </header>
-        <Search updateState={this.updateState.bind(this)}/>
-        <Filter updateState={this.updateState.bind(this)} />
-        <Result data={this.state.data}/>
+        <Search state={this.state} updateState={this.updateState.bind(this)} />
+        <Filter state={this.state} updateState = {this.updateState.bind(this)} />
+        <Result data={this.state.data}/> 
       </div>
     );
   }
