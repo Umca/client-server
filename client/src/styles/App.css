@@ -3,8 +3,8 @@
   grid-auto-rows: 15vw  10vw auto;
   grid-auto-columns: 30vw auto;
   justify-items: center;
-  align-items: center;
-  font-size: 2vw;
+  align-items: start;
+  font-size: 1.3vw;
 }
 
 .App-logo {
@@ -22,5 +22,9 @@
   grid-row-end:2;
   grid-column-start: 1; 
   grid-column-end: 3; 
+}
+
+.bold{
+  font-weight: 900;
 }
 

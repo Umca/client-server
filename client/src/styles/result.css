@@ -1,0 +1,43 @@
+.App-result_wrapper{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    font-size: 1.5vw;
+    flex-direction: column;
+    padding: 1vw 1.5vw;
+    
+    
+}
+.result-item_wrapper{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "image description";
+    min-width: 50%;
+    margin-bottom: 3vw;
+
+}
+
+.image_wrapper{
+    grid-area: image;
+}
+
+.image_wrapper img{
+    width: 90%;
+}
+
+.description_wrapper {
+    grid-area: description;
+}
+.description_table{
+    display: flex;
+}
+.description_table p{
+    margin:0;
+}
+
+.description_wrapper h4 {
+    margin: 0;
+}
