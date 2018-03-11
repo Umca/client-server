@@ -9,7 +9,7 @@ export default class Filter extends Component{
             // bodyFilter: [],
             // makerFilter: [],
             fuelFilter: 5,
-            priceFilter: 1000 
+            priceFilter: 800000 
         }
         this.bodyFilter = []
         this.makerFilter = []
@@ -102,6 +102,7 @@ export default class Filter extends Component{
                             max: '800000',
                             step: '1000',
                             description: `Under $ ${this.formateText(this.state.priceFilter)}`,
+                            default: '100000'
                         }}
                     />
                         
@@ -117,6 +118,7 @@ export default class Filter extends Component{
                                 max: '100',
                                 step: '1',
                                 description: `More than ${this.state.fuelFilter} MPG Highway`,
+                                default: '5'
                             }
                         }    
                         

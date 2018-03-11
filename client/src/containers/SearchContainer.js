@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import SearchOption from '../components/SearchOption'
 import '../styles/search.css'
 
 export default class Search extends Component{
@@ -19,19 +18,7 @@ export default class Search extends Component{
             inputValue: t
         },
             this.props.updateState('searchStr', t)    
-            // () => {
-            // if(t){
-            //     API.searchRequest(t)
-            //     .then(res => this.setState({
-            //         dataSource: res
-            //     }))
-            // } else {
-            //     this.setState({
-            //         dataSource: []
-            //     })
-            // }
-            //}
-    )
+        )
     }
     render(){
         return (
@@ -44,11 +31,6 @@ export default class Search extends Component{
                     />
                     <input className="search_input_loop" />
                 </p>    
-                <div>
-                    {/* {
-                        this.state.dataSource.map( car => <SearchOption model={car.model} key={car.id} />)
-                    } */}
-                </div>
             </div>
         )
     }
