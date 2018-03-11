@@ -6,10 +6,11 @@ const FilterRangeOption = ({ props }) => {
             <input
                 type="range"
                 id={props.id}
-                onChange={props.handleCallback}
+                onMouseUp={props.handleCallback}
                 min={props.min}
                 max={props.max}
                 step={props.step}
+                defaultValue={props.default}
                 />
             <label htmlFor={props.id}>{props.description}</label>
         </div>
