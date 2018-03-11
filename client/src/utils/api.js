@@ -3,12 +3,12 @@ import * as cancelableFetch  from 'cancelable-fetch'
 let request = null
 
 const API = {
-    searchRequest(text){
+    request(url){
         if(request){
             request.cancel()
         } else {
             request = cancelableFetch( 
-                fetch (`http://localhost:6650/api/cars/search?model=${text}`, 
+                fetch (`http://localhost:6650/api/cars/${url}`, 
                 {
                     headers: {
                         'Accept': 'application/json',
@@ -19,6 +19,9 @@ const API = {
                         request = null
                         return res.json()
                     })
+                    .catch(err => {
+                        console.log(err)
+                })
             )
             return request;
         }
