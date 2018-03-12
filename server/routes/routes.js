@@ -4,13 +4,15 @@ const math = require('mathjs')
 const filter = require('../utils/filter.js').filter
 const search = require('../utils/search.js').search
 
-const errorTimer = 11 //math.round(math.random() * 30)
+const errorTimer = 10 //math.round(math.random() * 30)
+const PER_PAGE = 4
 
 const throwError = (next) => {
     let err = new Error("Something went wrong.")
-    err.statusCode = 503;
+    err.statusCode = 503
     next(err)
 }
+
 
 router.get('/filter', (req, res, next) => {
     let queryParams = req.query

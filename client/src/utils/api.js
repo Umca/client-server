@@ -14,12 +14,16 @@ const API = {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
                     }
-                },)
+                    }, )
+                        
                     .then(res => {
                         request = null
-                        return res.json()
+                        // if (!res.ok) {
+                        //     throw Error(res.statusText);
+                        // }
+                            return res.json()
+                        
                     })
-
             )
             return request;
         }

@@ -8,6 +8,7 @@ import '../styles/App.css'
 import logo from '../assets/images/logo.png'
 import API from '../utils/api'
 import { formatUrl } from '../utils/additional'
+import ErrorBoundary from './Error'
 
 let initialState = {
   price: 800000,
@@ -38,9 +39,12 @@ class App extends Component {
   searchRequest(piece, val) {
     if (val) {
       API.request(formatUrl(piece, this.state, initialState))
-        .then(res => this.setState({
-          data: res
-        }))
+      .catch(err => console.log('from app', err))
+        .then(res => {
+          this.setState({
+            data: res
+          })
+        })
     } else {
       this.setState({
         data: initialState.data
@@ -50,6 +54,7 @@ class App extends Component {
 
   filterRequest(piece, val) { 
     API.request(formatUrl(null, this.state, initialState))
+      .catch(err => console.log('from app', err))
       .then(res => this.setState({
         data: res
       }))
@@ -67,8 +72,10 @@ class App extends Component {
           />
         </header>
         <Search state={this.state} updateState={this.updateState.bind(this)} />
-        <Filter state={this.state} updateState = {this.updateState.bind(this)} />
-        <Result data={this.state.data}/> 
+        <Filter state={this.state} updateState={this.updateState.bind(this)} />
+        {/* <ErrorBoundary> */}
+          <Result data={this.state.data} /> 
+        {/* </ErrorBoundary>   */}
       </div>
     );
   }
