@@ -1,31 +1,20 @@
 import * as cancelableFetch  from 'cancelable-fetch'
 
-let request = null
-
 const API = {
-    request(url){
-        if(request){
-            request.cancel()
+    current: null,
+    request(url) {
+        if(this.current) {
+            this.current.cancel()
+            return Promise.reject('Another request')
         } else {
-            request = cancelableFetch( 
-                fetch (`http://localhost:6650/api/cars/${url}`, 
+            return this.current = cancelableFetch( 
+                fetch(`http://localhost:6650/api/cars/${url}`, 
                 {
                     headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
                     }
-                    }, )
-                        
-                    .then(res => {
-                        request = null
-                        // if (!res.ok) {
-                        //     throw Error(res.statusText);
-                        // }
-                            return res.json()
-                        
-                    })
-            )
-            return request;
+                }))
         }
     }
 }

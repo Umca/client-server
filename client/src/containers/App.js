@@ -39,8 +39,15 @@ class App extends Component {
   searchRequest(piece, val) {
     if (val) {
       API.request(formatUrl(piece, this.state, initialState))
-      .catch(err => console.log('from app', err))
         .then(res => {
+          if (!res.ok) return Promise.reject('Failed request!')
+          else return Promise.resolve(res.json())
+        })
+        .catch(err => console.log('from app', err))        
+        .then(res => {
+          console.log(res)
+          API.current = null
+          if (!res) return null
           this.setState({
             data: res
           })
