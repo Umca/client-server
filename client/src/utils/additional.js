@@ -14,8 +14,9 @@ const createUrlQuery = (state, initialState) => {
     let query = ""
 
     for (let key in state) {
-        if (state.hasOwnProperty(key) && key !== 'searchStr' && key !== 'data') {
-            if (state[key] == initialState[key]) {
+        if (state.hasOwnProperty(key) && key !== 'searchStr' && key !== 'data' && key !== 'errors') {
+            debugger
+            if (state[key] === initialState[key] || (Array.isArray(state[key]) && state[key].length == 0)) {
                 continue;
             }
             if (Array.isArray(state[key])) {

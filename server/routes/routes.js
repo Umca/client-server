@@ -4,8 +4,9 @@ const math = require('mathjs')
 const filter = require('../utils/filter.js').filter
 const search = require('../utils/search.js').search
 
-const errorTimer = 10 //math.round(math.random() * 30)
+let errorTimer //math.round(math.random() * 30)
 const PER_PAGE = 4
+let filtered
 
 const throwError = (next) => {
     let err = new Error("Something went wrong.")
@@ -17,26 +18,32 @@ const throwError = (next) => {
 router.get('/filter', (req, res, next) => {
     let queryParams = req.query
 
-    console.log('params', queryParams)
+    errorTimer = 0.1//math.random()
 
-    if(errorTimer % 10 == 0){
+    console.log('params', queryParams, errorTimer)
+
+    if (errorTimer > 0.5) {
         throwError(next)
     } else {
-        let filtered = filter(queryParams)
-        res.send(JSON.stringify(filtered))
+        filtered = filter(queryParams, filtered)
+        res.send(JSON.stringify(filtered.slice(0, 2)))
     }
 })
 
 router.get('/search', (req, res, next) => {
-    let { model } = req.query
+    let {
+        model
+    } = req.query
 
-    console.log('params', model)
-    
-    if(errorTimer % 10 == 0){
+    errorTimer = 0.1//math.random()
+
+    console.log('params', model, errorTimer)
+
+    if (errorTimer > 0.5) {
         throwError(next)
     } else {
-        let filtered = search(model)
-        res.send(JSON.stringify(filtered))
+        filtered = search(model, filtered)
+        res.send(JSON.stringify(filtered.slice(0,2)))
     }
 })
 

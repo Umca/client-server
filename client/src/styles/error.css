@@ -1,0 +1,11 @@
+.App-error{
+    text-align: center;
+}
+.App-error img{
+    width: 40%;
+}
+
+.App-error .error_message{
+    font-size: 5vw;
+    text-transform: uppercase;
+}

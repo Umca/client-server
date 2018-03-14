@@ -32,40 +32,41 @@ class App extends Component {
   }
 
   sendRequest(piece, val) {
-    if (piece == "searchStr") this.searchRequest(piece, val)
-    else this.filterRequest(piece, val)
-  }
 
-  searchRequest(piece, val) {
-    if (val) {
-      API.request(formatUrl(piece, this.state, initialState))
-        .then(res => {
-          if (!res.ok) return Promise.reject('Failed request!')
-          else return Promise.resolve(res.json())
-        })
-        .catch(err => console.log('from app', err))        
-        .then(res => {
-          console.log(res)
-          API.current = null
-          if (!res) return null
-          this.setState({
-            data: res
+      if (val) {
+        API.request(formatUrl(piece, this.state, initialState))
+          .then(res => {
+            if (!res.ok) return Promise.reject(`Failed request! ${res.statusText}`)
+            else return Promise.resolve(res.json())
           })
-        })
+          .catch(err => {
+            console.log('from app', err)
+            this.setState({
+              errors : true
+            })
+          })        
+          .then(res => {
+            debugger
+            API.current = null
+            if (!res){
+              setTimeout(() => {
+                this.sendRequest(piece, val)
+              }, 1500)
+              
+              return null
+            }
+            this.setState({
+              data: res,
+              errors: false
+            })
+          })
     } else {
       this.setState({
-        data: initialState.data
+        data: initialState.data,
       })
     }
-  }
+}
 
-  filterRequest(piece, val) { 
-    API.request(formatUrl(null, this.state, initialState))
-      .catch(err => console.log('from app', err))
-      .then(res => this.setState({
-        data: res
-      }))
-  }
 
   render() {
     return (
