@@ -33,11 +33,13 @@ const filterOptions = {
     }
 }
 
-const filter = (queryObj) => {
-    let result = []
-    let copy = JSON.parse(JSON.stringify(cars));
+const filter = (queryObj, list) => {
+    let result, copy
+    result = []
+    copy = list ? list : JSON.parse(JSON.stringify(cars));
     for(let key in queryObj){
         if(queryObj.hasOwnProperty(key)){
+        
            let filtered = copy.filter(filterOptions[key].bind(this, queryObj[key]))
            result = [...filtered]
            copy = filtered;
