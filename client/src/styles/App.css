@@ -1,6 +1,6 @@
 .App {
   display: grid;
-  grid-auto-rows: 15vw  10vw auto;
+  grid-auto-rows: 15vw  10vw 60vw;
   grid-auto-columns: 30vw auto;
   justify-items: center;
   align-items: start;

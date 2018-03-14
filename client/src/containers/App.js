@@ -8,21 +8,21 @@ import '../styles/App.css'
 import logo from '../assets/images/logo.png'
 import API from '../utils/api'
 import { formatUrl } from '../utils/additional'
-import ErrorBoundary from './Error'
+import { initialState } from '../utils/constants'
+import Error from '../components/Error'
+import observer from '../utils/observer'
 
-let initialState = {
-  price: 800000,
-  fuel: 5,
-  maker: [],
-  body: [],
-  searchStr: '',
-  data: []
-}
 class App extends Component {
   constructor() {
     super()
     this.state = initialState
   }
+  componentDidMount(){
+    const target = document.querySelector('#break')
+    console.log(target)
+    observer.observe(target)
+  }
+
   updateState(piece, val) {
     this.setState({
         [`${piece}`]: val
@@ -81,9 +81,12 @@ class App extends Component {
         </header>
         <Search state={this.state} updateState={this.updateState.bind(this)} />
         <Filter state={this.state} updateState={this.updateState.bind(this)} />
-        {/* <ErrorBoundary> */}
-          <Result data={this.state.data} /> 
-        {/* </ErrorBoundary>   */}
+        {
+          !this.state.errors ? 
+            <Result data={this.state.data} /> : 
+            <Error message={"Oops! Service unavailbale. Bad request!"}/>
+        }
+        <div id="break" style={{ width: '1px', height:"1px", border: "1px solid red"}}></div>
       </div>
     );
   }
