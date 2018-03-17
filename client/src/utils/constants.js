@@ -3,7 +3,7 @@ export const initialState = {
     fuel: 5,
     maker: [],
     body: [],
-    searchStr: '',
+    model: '',
     data: [],
     errors: false
   }

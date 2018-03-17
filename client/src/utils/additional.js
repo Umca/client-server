@@ -14,8 +14,7 @@ const createUrlQuery = (state, initialState) => {
     let query = ""
 
     for (let key in state) {
-        if (state.hasOwnProperty(key) && key !== 'searchStr' && key !== 'data' && key !== 'errors') {
-            debugger
+        if (state.hasOwnProperty(key) && key !== 'data' && key !== 'errors') {
             if (state[key] === initialState[key] || (Array.isArray(state[key]) && state[key].length == 0)) {
                 continue;
             }
@@ -27,18 +26,13 @@ const createUrlQuery = (state, initialState) => {
             }
         }
     }
-    return query;
+    return query.slice(0, query.length-1);
 }
 
-export const formatUrl = (type, state, initialState) => {
-    let result = ""
-    switch (type) {
-        case 'searchStr':
-            result = `search?model=${state[type]}`
-            break;
-        default:
-            result = `filter?${createUrlQuery(state, initialState)}`
-    }
+export const formatUrl = (state, initialState) => {
+
+    let result = `filter?${createUrlQuery(state, initialState)}`
+    
     return result
 }
 

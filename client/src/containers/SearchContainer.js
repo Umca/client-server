@@ -6,7 +6,7 @@ export default class Search extends Component{
         super(props)
 
         this.state = {
-            inputValue:this.props.state.searchStr,
+            inputValue:this.props.state.model,
         }
         
     }
@@ -16,7 +16,7 @@ export default class Search extends Component{
         this.setState({
             inputValue: str
         },        
-            this.props.updateState('searchStr', str)    
+            this.props.updateState('model', str)    
         )
     }
     render(){
