@@ -14,59 +14,57 @@ import observer from '../utils/observer'
 
 class App extends Component {
   constructor() {
-    super()
-    this.state = initialState
+      super()
+      this.state = initialState
   }
   componentDidMount(){
-    const target = document.querySelector('#break')
-    console.log(target)
-    observer.observe(target)
+      const target = document.querySelector('#break')
+      console.log(target)
+      observer.observe(target)
   }
 
   updateState(piece, val) {
-    this.setState({
-        [`${piece}`]: val
+      this.setState({
+          [`${piece}`]: val
       },
-      () => this.sendRequest(piece, val)
-    )
+      () => { 
+          if (!val) {
+              this.setState({
+                  data: initialState.data,
+              })
+          } else { 
+              this.sendRequest()
+          }
+        }
+      )
   }
 
-  sendRequest(piece, val) {
-
-      if (val) {
-        API.request(formatUrl(piece, this.state, initialState))
-          .then(res => {
-            if (!res.ok) return Promise.reject(`Failed request! ${res.statusText}`)
-            else return Promise.resolve(res.json())
-          })
-          .catch(err => {
-            console.log('from app', err)
-            this.setState({
-              errors : true
-            })
-          })        
-          .then(res => {
-            debugger
-            API.current = null
-            if (!res){
-              setTimeout(() => {
-                this.sendRequest(piece, val)
-              }, 1500)
-              
-              return null
-            }
-            this.setState({
-              data: res,
-              errors: false
-            })
-          })
-    } else {
-      this.setState({
-        data: initialState.data,
+  sendRequest() {
+      API.request(formatUrl(this.state, initialState))
+      .then(res => {
+          if (!res.ok) return Promise.reject(`Failed request! ${res.statusText}`)
+          else return Promise.resolve(res.json())
       })
-    }
+      .catch(err => {
+          console.log('from app', err)
+          this.setState({
+            errors : true
+          })
+      })        
+      .then(res => {
+          API.current = null
+          if (!res){
+          setTimeout(() => {
+              this.sendRequest()
+          }, 1500)
+          return null
+      }
+      this.setState({
+          data: res,
+          errors: false
+      })
+    })
 }
-
 
   render() {
     return (
