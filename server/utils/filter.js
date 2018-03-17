@@ -30,13 +30,16 @@ const filterOptions = {
     },
     fuel: (val, obj) => {
         return obj.fuel.min >= parseInt(val);
+    },
+    model: (val, obj) => {
+        return obj.model.toLowerCase().indexOf(val.toLowerCase()) > -1
     }
 }
 
-const filter = (queryObj, list) => {
+const filter = (queryObj) => {
     let result, copy
     result = []
-    copy = list ? list : JSON.parse(JSON.stringify(cars));
+    copy =  JSON.parse(JSON.stringify(cars));
     for(let key in queryObj){
         if(queryObj.hasOwnProperty(key)){
         
