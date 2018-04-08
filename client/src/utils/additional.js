@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 const fillWith = (str, what, amount) => {
     return str.padStart(amount, what)
 }
@@ -14,7 +16,7 @@ const createUrlQuery = (state, initialState) => {
     let query = ""
 
     for (let key in state) {
-        if (state.hasOwnProperty(key) && key !== 'data' && key !== 'errors') {
+        if (state.hasOwnProperty(key) && key !== 'data' && key !== 'errors' && key !== 'page') {
             if (state[key] === initialState[key] || (Array.isArray(state[key]) && state[key].length == 0)) {
                 continue;
             }
@@ -36,3 +38,12 @@ export const formatUrl = (state, initialState) => {
     return result
 }
 
+
+export const isFilter = (state, initialState) => {
+    const fields = ['price', 'fuel', 'body', 'maker']
+    let a = fields.filter(piece => {
+        if (Array.isArray(state[piece])) return _.isEqual(state[piece], initialState[piece])
+        return state[piece] == initialState[piece]
+    })
+    return a.length == fields.length
+}
