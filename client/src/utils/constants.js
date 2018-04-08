@@ -5,5 +5,6 @@ export const initialState = {
     body: [],
     model: '',
     data: [],
-    errors: false
+    errors: false,
+    page: 0
   }
