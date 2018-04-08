@@ -6,11 +6,7 @@
     display: flex;
     font-size: 1.5vw;
     flex-direction: column;
-    padding: 1vw 1.5vw;
-    height: 50vw;
-    border: 1px solid red;
-    
-    
+    padding: 1vw 1.5vw;    
 }
 .result-item_wrapper{
     display: grid;

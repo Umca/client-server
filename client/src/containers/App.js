@@ -7,28 +7,70 @@ import Result from '../components/Result'
 import '../styles/App.css'
 import logo from '../assets/images/logo.png'
 import API from '../utils/api'
-import { formatUrl } from '../utils/additional'
+import { formatUrl, isFilter } from '../utils/additional'
 import { initialState } from '../utils/constants'
 import Error from '../components/Error'
-import observer from '../utils/observer'
 
 class App extends Component {
   constructor() {
-      super()
-      this.state = initialState
+    super()
+    this.state = initialState
+    this.prevY = 0
+
+    this.rangeRef = {}//React.createRef()
   }
-  componentDidMount(){
+  componentDidMount() {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1.0
+    }
+    const observer = new IntersectionObserver(
+      this.handleObserver.bind(this), options)
       const target = document.querySelector('#break')
-      console.log(target)
-      observer.observe(target)
+
+    observer.observe(target)
+    
+
+  }
+
+  handleObserver(entities, observer) {
+    const y = entities[0].boundingClientRect.y
+    if (this.prevY > y) {
+    const page = ++this.state.page
+
+      //request
+      fetch(`http://localhost:6650/api/cars/page?since=${page}`,
+        {
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(res => res.json())
+        .then(res => {
+          if (res) {
+              this.setState({
+                  page,
+                  data: [...this.state.data, ...res]
+              })
+          } else {
+            this.setState({
+              page: 0
+            })
+          }
+            
+        })      
+    }
+    this.prevY = y
   }
 
   updateState(piece, val) {
       this.setState({
           [`${piece}`]: val
       },
-      () => { 
-          if (!val) {
+        () => { 
+          if (!val && isFilter(this.state, initialState)) {
               this.setState({
                   data: initialState.data,
               })
@@ -51,15 +93,15 @@ class App extends Component {
             errors : true
           })
       })        
-      .then(res => {
+        .then(res => {
           API.current = null
           if (!res){
-          setTimeout(() => {
-              this.sendRequest()
-          }, 1500)
-          return null
-      }
-      this.setState({
+            setTimeout(() => {
+                this.sendRequest()
+            }, 1500)
+            return null
+          }
+          this.setState({
           data: res,
           errors: false
       })
@@ -78,13 +120,12 @@ class App extends Component {
           />
         </header>
         <Search state={this.state} updateState={this.updateState.bind(this)} />
-        <Filter state={this.state} updateState={this.updateState.bind(this)} />
+        <Filter state={this.state} updateState={this.updateState.bind(this)} rangeRef={this.rangeRef} />
         {
           !this.state.errors ? 
             <Result data={this.state.data} /> : 
             <Error message={"Oops! Service unavailbale. Bad request!"}/>
         }
-        <div id="break" style={{ width: '1px', height:"1px", border: "1px solid red"}}></div>
       </div>
     );
   }

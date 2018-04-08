@@ -5,11 +5,12 @@ import "../styles/result.css"
 const Result = ({ data }) => {
     return (
         <div className="App-result_wrapper">
-            <div className="test" >
+            <div  style={{minHeight: '60vw'}}>
             {
                 data.map(item => <ResultItem key={item.model} data={item} />)
             }
             </div>
+            <div id="break" style={{ width: '100%', height: "10px",  }}></div>
         </div>
         )
     }
