@@ -13,7 +13,6 @@ server.use(function(req, res, next) {
 server.use('/api/cars', routes)
 
 server.use(function(err, req, res, nex) {
-    console.error(err.message)
     res.status(err.statusCode).send(err.message)
 })
 
